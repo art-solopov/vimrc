@@ -158,6 +158,8 @@ set ttymouse=xterm2
 
 colorscheme molokai
 
+let g:neocomplcache_enable_at_startup = 1 
+
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
@@ -168,7 +170,7 @@ let g:airline_right_sep='|'
 let g:airline#extensions#tablineabline#left_sep = ''
 let g:airline_symbols.branch = 'ᛋ'
 let g:airline_symbols.linenr = '␤'
-let g:airline_section_c = "%{getcwd()}"
+let g:airline_section_c = ""
 
 nnoremap <C-g><Right> :bn<CR>
 nnoremap <C-g><Left> :bp<CR>
