@@ -175,3 +175,6 @@ let g:airline_section_c = ""
 nnoremap <C-g><Right> :bn<CR>
 nnoremap <C-g><Left> :bp<CR>
 nnoremap <C-g>B :b
+
+nnoremap <F5> :NERDTreeToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
