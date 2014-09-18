@@ -16,6 +16,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'xolox/vim-session'
 
 " PLUGINS END
 
