@@ -17,6 +17,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-session'
 
 " PLUGINS END
