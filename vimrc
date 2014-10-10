@@ -166,15 +166,15 @@ endif
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''
-let g:airline_right_sep='|'
+let g:airline_right_sep=''
 let g:airline#extensions#tablineabline#left_sep = ''
 let g:airline_symbols.branch = 'ᛋ'
 let g:airline_symbols.linenr = '␤'
-let g:airline_section_c = ""
+let g:airline_section_c = airline#section#create(['%n', ' ', '%t'])
 
 nnoremap <C-g><Right> :bn<CR>
 nnoremap <C-g><Left> :bp<CR>
-nnoremap <C-g>B :b
+nnoremap <C-g>B :ls<CR>
 
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
