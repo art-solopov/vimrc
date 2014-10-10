@@ -20,6 +20,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-session'
+Plugin 'tpope/vim-haml'
+Plugin 'mhinz/vim-signify'
 
 " PLUGINS END
 
