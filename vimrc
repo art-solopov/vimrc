@@ -180,3 +180,5 @@ nnoremap <C-g>B :ls<CR>
 
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
+
+au BufRead,BufNewFile *.thor set filetype=ruby
