@@ -22,6 +22,9 @@ Plugin 'xolox/vim-notes'
 Plugin 'xolox/vim-session'
 Plugin 'tpope/vim-haml'
 Plugin 'mhinz/vim-signify'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'chrisbra/csv.vim'
 
 " PLUGINS END
 
