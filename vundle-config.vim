@@ -25,6 +25,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'chrisbra/csv.vim'
+Plugin 'xolox/vim-easytags'
 
 " PLUGINS END
 

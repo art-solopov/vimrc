@@ -182,3 +182,6 @@ nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
 au BufRead,BufNewFile *.thor set filetype=ruby
+
+set tags=./vim-tags
+let g:easytags_dynamic_files = 2
