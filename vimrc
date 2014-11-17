@@ -154,11 +154,12 @@ filetype off
 source ~/.vim/vundle-config.vim
 filetype plugin indent on
 
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
+
 set ttymouse=xterm2
 
 colorscheme molokai
-
-let g:neocomplcache_enable_at_startup = 1 
 
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
