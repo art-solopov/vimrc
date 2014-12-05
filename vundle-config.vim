@@ -13,6 +13,7 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'davidhalter/jedi-vim'
 
 " Framework/library plugins
 Plugin 'tpope/vim-rails'
