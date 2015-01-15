@@ -183,6 +183,6 @@ nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
 au BufRead,BufNewFile *.thor set filetype=ruby
+au! BufNewFile,BufRead *.md set filetype=markdown
 
-set tags=./vim-tags
-let g:easytags_dynamic_files = 2
+let g:session_autosave = 'no'

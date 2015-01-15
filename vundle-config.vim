@@ -35,7 +35,6 @@ Plugin 'xolox/vim-session'
 Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
-Plugin 'xolox/vim-easytags'
 
 " PLUGINS END
 
