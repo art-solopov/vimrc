@@ -20,7 +20,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 
 " UI plugins & Themes
-
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nanotech/jellybeans.vim'
@@ -35,6 +34,9 @@ Plugin 'xolox/vim-session'
 Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
 
 " PLUGINS END
 
