@@ -182,6 +182,8 @@ nnoremap <C-g>B :ls<CR>
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
+nnoremap <Leader><C-l> :LineLength<CR>
+
 au BufRead,BufNewFile *.thor set filetype=ruby
 au! BufNewFile,BufRead *.md set filetype=markdown
 
