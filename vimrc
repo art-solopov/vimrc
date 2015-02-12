@@ -182,8 +182,6 @@ nnoremap <C-g>B :ls<CR>
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
-nnoremap <Leader><C-l> :LineLength<CR>
-
 au BufRead,BufNewFile *.thor set filetype=ruby
 au! BufNewFile,BufRead *.md set filetype=markdown
 
@@ -193,3 +191,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+set colorcolumn=80,120
