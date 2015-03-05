@@ -145,6 +145,19 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" Map buffer switches
+nnoremap <C-g><Right> :bn<CR>
+nnoremap <C-g><Left> :bp<CR>
+nnoremap <C-g>B :ls<CR>
+
+" Map NERDTree
+nnoremap <F5> :NERDTreeToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
+
+" Map open a file directory
+nnoremap <C-g>D :exe 'e ' . expand('%:h')<CR>
+
+
 "------------------------------------------------------------
 
 :set t_Co=256
@@ -154,13 +167,17 @@ filetype off
 source ~/.vim/vundle-config.vim
 filetype plugin indent on
 
+" Ruby complete options
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
+let g:session_autosave = 'no'
+set colorcolumn=80,120
 
+" Various UI options
 set ttymouse=xterm2
-
 colorscheme molokai
 
+" Airline options
 if !exists('g:airline_symbols')
 let g:airline_symbols = {}
 endif
@@ -175,18 +192,11 @@ let g:airline_symbols.linenr = '␤'
 let g:airline_section_c = airline#section#create(['%n', ' ', '%t'])
 let g:airline#extensions#hunks#enabled = 1
 
-nnoremap <C-g><Right> :bn<CR>
-nnoremap <C-g><Left> :bp<CR>
-nnoremap <C-g>B :ls<CR>
-
-nnoremap <F5> :NERDTreeToggle<CR>
-nnoremap <F8> :TagbarToggle<CR>
-
+" Buffer filetypes
 au BufRead,BufNewFile *.thor set filetype=ruby
 au! BufNewFile,BufRead *.md set filetype=markdown
 
-let g:session_autosave = 'no'
-
+" Syntastic options
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
@@ -197,4 +207,6 @@ let g:syntastic_error_symbol = "☢"
 let g:syntastic_warning_symbol = "⚠"
 hi SyntasticWarningSign guifg=Black guibg=Yellow ctermfg=232 ctermbg=100
 
-set colorcolumn=80,120
+" Surround.vim maps
+" Rspec
+let g:surround_114 = "it { \r }"
