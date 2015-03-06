@@ -157,6 +157,9 @@ nnoremap <F8> :TagbarToggle<CR>
 " Map open a file directory
 nnoremap <C-g>D :exe 'e ' . expand('%:h')<CR>
 
+" Map wiping out all buffers
+nnoremap <C-g>w :%bwipeout<CR>
+
 
 "------------------------------------------------------------
 
