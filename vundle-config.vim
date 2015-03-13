@@ -17,6 +17,7 @@ Plugin 'davidhalter/jedi-vim'
 
 " Framework/library plugins
 Plugin 'tpope/vim-rails'
+Plugin 'stefanoverna/vim-i18n'
 Plugin 'tpope/vim-bundler'
 
 " UI plugins & Themes
@@ -38,6 +39,11 @@ Plugin 'tpope/vim-endwise'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'duggiefresh/vim-easydir'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'tpope/vim-speeddating'
+Plugin 'vim-scripts/matchit.zip'
 
 " PLUGINS END
 
