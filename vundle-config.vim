@@ -44,6 +44,7 @@ Plugin 'duggiefresh/vim-easydir'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'mtth/scratch.vim'
 
 " PLUGINS END
 

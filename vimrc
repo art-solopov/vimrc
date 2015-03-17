@@ -162,6 +162,23 @@ nnoremap <C-g>w :%bwipeout<CR>
 
 
 "------------------------------------------------------------
+" Set swap file directory with Python
+python << endpython
+import vim, os.path
+from os import getcwd, environ
+from hashlib import md5
+cwd = getcwd()
+m = md5()
+m.update(cwd)
+swd = m.hexdigest()
+full_swd = os.path.join(environ['HOME'], '.vim', '.swap', swd)
+if not os.path.exists(full_swd):
+    os.makedirs(full_swd)
+vim.command('set backupdir=' + full_swd)
+vim.command('set directory=' + full_swd)
+endpython
+
+"------------------------------------------------------------
 
 :set t_Co=256
 
