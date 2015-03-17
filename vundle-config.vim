@@ -45,6 +45,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'mtth/scratch.vim'
+Plugin 'sjl/gundo.vim'
 
 " PLUGINS END
 

@@ -160,6 +160,9 @@ nnoremap <C-g>D :exe 'e ' . expand('%:h')<CR>
 " Map wiping out all buffers
 nnoremap <C-g>w :%bwipeout<CR>
 
+" Gundo
+nnoremap <F6> :GundoToggle<CR>
+
 
 "------------------------------------------------------------
 " Set swap file directory with Python
