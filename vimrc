@@ -190,9 +190,14 @@ filetype off
 source ~/.vim/vundle-config.vim
 filetype plugin indent on
 
+" Autocomplete option
+set completefunc=syntaxcomplete#Complete
+
 " Ruby complete options
 let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
+
 let g:session_autosave = 'no'
 set colorcolumn=80,120
 
@@ -233,3 +238,4 @@ hi SyntasticWarningSign guifg=Black guibg=Yellow ctermfg=232 ctermbg=100
 " Surround.vim maps
 " Rspec
 let g:surround_114 = "it { \r }"
+
