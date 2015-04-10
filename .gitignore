@@ -2,3 +2,5 @@ bundle
 .*.sw*
 *~
 .swap
+
+vundle-config-local.vim

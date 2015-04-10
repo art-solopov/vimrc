@@ -47,6 +47,8 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'mtth/scratch.vim'
 Plugin 'sjl/gundo.vim'
 
+source ~/.vim/vundle-config-local.vim
+
 " PLUGINS END
 
 call vundle#end()
