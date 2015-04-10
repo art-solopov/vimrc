@@ -163,6 +163,9 @@ nnoremap <C-g>w :%bwipeout<CR>
 " Gundo
 nnoremap <F6> :GundoToggle<CR>
 
+"CtrlP
+nnoremap <C-g>p :CtrlPBuffer<CR>
+
 
 "------------------------------------------------------------
 " Set swap file directory with Python
@@ -219,6 +222,11 @@ let g:airline_symbols.branch = 'ᛋ'
 let g:airline_symbols.linenr = '␤'
 let g:airline_section_c = airline#section#create(['%n', ' ', '%t'])
 let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_min_count = 2
+
+" MiniBufExplorer options
+let g:miniBufExplBuffersNeeded = 0
 
 " Buffer filetypes
 au BufRead,BufNewFile *.thor set filetype=ruby
