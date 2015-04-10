@@ -27,6 +27,7 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'techlivezheng/vim-plugin-minibufexpl'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
