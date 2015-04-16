@@ -243,6 +243,9 @@ let g:syntastic_error_symbol = "☢"
 let g:syntastic_warning_symbol = "⚠"
 hi SyntasticWarningSign guifg=Black guibg=Yellow ctermfg=232 ctermbg=100
 
+" MiniBufExpl options
+hi MBEVisibleActiveNormal guifg=Yellow ctermfg=100
+
 " Surround.vim maps
 " Rspec
 let g:surround_114 = "it { \r }"

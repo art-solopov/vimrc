@@ -28,6 +28,7 @@ Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'techlivezheng/vim-plugin-minibufexpl'
+Plugin 'guns/xterm-color-table.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
