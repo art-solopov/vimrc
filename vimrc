@@ -186,12 +186,17 @@ endpython
 
 "------------------------------------------------------------
 
-:set t_Co=256
+set t_Co=256
+set t_ut=
 
 " Vundle options
 filetype off
 source ~/.vim/vundle-config.vim
 filetype plugin indent on
+
+" Folding
+set foldmethod=syntax
+set nofoldenable " disable folding
 
 " Autocomplete option
 set completefunc=syntaxcomplete#Complete
