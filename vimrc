@@ -155,6 +155,9 @@ nnoremap <C-g>B :ls<CR>
 
 " Map NERDTree
 nnoremap <F5> :NERDTreeToggle<CR>
+nnoremap <C-\><F5> :NERDTreeFind<CR>
+
+" Map Tagbar
 nnoremap <F8> :TagbarToggle<CR>
 
 " Map open a file directory
@@ -218,6 +221,7 @@ colorscheme molokai
 
 " Buffer filetypes
 au BufRead,BufNewFile *.thor set filetype=ruby
+au BufRead,BufNewFile *.json.jbuilder set filetype=ruby
 au! BufNewFile,BufRead *.md set filetype=markdown
 
 " MiniBufExpl options
