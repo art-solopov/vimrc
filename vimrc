@@ -145,6 +145,9 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" Copy current file path
+nnoremap <C-\>e :let @+ = expand("%")<CR>
+
 " Map buffer switches
 nnoremap <C-g><Right> :bn<CR>
 nnoremap <C-g><Left> :bp<CR>
