@@ -195,10 +195,8 @@ endpython
 set t_Co=256
 set t_ut=
 
-" Vundle options
-filetype off
-source ~/.vim/vundle-config.vim
-filetype plugin indent on
+" Plugins
+source ~/.vim/plugins.vim
 
 " Folding
 set foldmethod=syntax

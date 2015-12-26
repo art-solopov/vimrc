@@ -1,6 +1,9 @@
-bundle
 .*.sw*
 *~
 .swap
 
-vundle-config-local.vim
+plugins.local.vim
+
+autoload
+plugged
+sessions
