@@ -217,10 +217,41 @@ set colorcolumn=80,120
 set ttymouse=xterm2
 colorscheme molokai
 
+" Airline options
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep=''
+let g:airline_right_sep='|'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = 'ᛋ'
+let g:airline_symbols.linenr = '␤'
+let g:airline_section_c = airline#section#create(['%n', ' ', '%t'])
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_min_count = 2
+
+" MiniBufExplorer options
+let g:miniBufExplBuffersNeeded = 0
+
 " Buffer filetypes
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.json.jbuilder set filetype=ruby
 au! BufNewFile,BufRead *.md set filetype=markdown
+
+" Syntastic options
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = "☢"
+let g:syntastic_warning_symbol = "⚠"
+hi SyntasticWarningSign guifg=Black guibg=Yellow ctermfg=232 ctermbg=100
 
 " MiniBufExpl options
 hi MBEVisibleActiveNormal guifg=Yellow ctermfg=100
