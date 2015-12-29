@@ -10,7 +10,7 @@ Plug 'xolox/vim-misc'
 
 " Other plugins
 
-if $GIT_DIR == ''
+if g:is_not_git == 1
     " Language/format plugins
     Plug 'kchmck/vim-coffee-script'
     Plug 'tpope/vim-haml'
@@ -41,7 +41,7 @@ if $GIT_DIR == ''
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-endwise'
-    Plug 'kien/ctrlp.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'Lokaltog/vim-easymotion'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
