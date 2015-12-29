@@ -146,11 +146,11 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Copy current file path
-nnoremap <C-\>e :let @+ = expand("%")<CR>
+nnoremap <Leader><C-e> :let @+ = expand("%")<CR>
 
 " Map buffer switches
-nnoremap <C-g><Right> :bn<CR>
-nnoremap <C-g><Left> :bp<CR>
+nnoremap <C-g><Right> :MBEbn<CR>
+nnoremap <C-g><Left> :MBEbp<CR>
 nnoremap <C-g>B :ls<CR>
 
 " Map NERDTree
@@ -163,8 +163,9 @@ nnoremap <F8> :TagbarToggle<CR>
 " Map open a file directory
 nnoremap <C-g>D :exe 'e ' . expand('%:h')<CR>
 
-" Map wiping out all buffers
-nnoremap <C-g>w :%bwipeout<CR>
+" Map wiping out buffers
+nnoremap <C-g>w :%bdelete<CR>
+nnoremap <C-g>q :bdelete<CR>
 
 " Gundo
 nnoremap <F6> :GundoToggle<CR>
@@ -192,6 +193,8 @@ endpython
 
 "------------------------------------------------------------
 
+let g:is_not_git=($GIT_DIR == '')
+
 set t_Co=256
 set t_ut=
 
@@ -205,8 +208,6 @@ set nofoldenable " disable folding
 " Various UI options
 set ttymouse=xterm2
 colorscheme molokai
-
-let g:is_not_git=($GIT_DIR == '')
 
 if g:is_not_git == 1
 
@@ -265,4 +266,3 @@ if g:is_not_git == 1
     let g:surround_114 = "it { \r }"
 
 endif
-
