@@ -6,15 +6,34 @@
 "              on this file is still a good idea.
 
 "------------------------------------------------------------
-" Features {{{1
+" Vim-specific features and options
+if !has('nvim')
+    " Set 'nocompatible' to ward off unexpected things that your distro might
+    " have made, as well as sanely reset options when re-sourcing .vimrc
+    set nocompatible
+
+    " Better command-line completion
+    set wildmenu
+
+    " Show partial commands in the last line of the screen
+    set showcmd
+
+    " Allow backspacing over autoindent, line breaks and start of insert action
+    set backspace=indent,eol,start
+
+    " When opening a new line and no filetype-specific indenting is enabled, keep
+    " the same indent as the line you're currently on. Useful for READMEs, etc.
+    set autoindent
+
+    " Always display the status line, even if only one window is displayed
+    set laststatus=2
+
+    " Enable use of the mouse for all modes
+    set mouse=a
+endif
 "
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
-
-" Set 'nocompatible' to ward off unexpected things that your distro might
-" have made, as well as sanely reset options when re-sourcing .vimrc
-set nocompatible
-
 
 " Enable syntax highlighting
 syntax on
@@ -45,16 +64,6 @@ set hidden
 " set confirm
 " set autowriteall
 
-" Better command-line completion
-set wildmenu
-
-" Show partial commands in the last line of the screen
-set showcmd
-
-" Highlight searches (use <C-L> to temporarily turn off highlighting; see the
-" mapping of <C-L> below)
-set hlsearch
-
 " Modelines have historically been a source of security vulnerabilities. As
 " such, it may be a good idea to disable them and use the securemodelines
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
@@ -73,12 +82,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Allow backspacing over autoindent, line breaks and start of insert action
-set backspace=indent,eol,start
-
-" When opening a new line and no filetype-specific indenting is enabled, keep
-" the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -88,9 +91,6 @@ set nostartofline
 " Display the cursor position on the last line of the screen or in the status
 " line of a window
 set ruler
-
-" Always display the status line, even if only one window is displayed
-set laststatus=2
 
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
@@ -103,9 +103,6 @@ set visualbell
 " this line is also included, vim will neither flash nor beep. If visualbell
 " is unset, this does nothing.
 set t_vb=
-
-" Enable use of the mouse for all modes
-set mouse=a
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
@@ -125,9 +122,6 @@ set pastetoggle=<F11>
 " Indentation options {{{1
 "
 " Indentation settings according to personal preference.
-
-" Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -175,11 +169,12 @@ nnoremap <C-g>p :CtrlPBuffer<CR>
 
 
 "------------------------------------------------------------
-" Set swap file directory with Python
+" Python
 python << endpython
 import vim, os.path
 from os import getcwd, environ
 from hashlib import md5
+# Set swap file directory with Python
 cwd = getcwd()
 m = md5()
 m.update(cwd)
@@ -187,8 +182,8 @@ swd = m.hexdigest()
 full_swd = os.path.join(environ['HOME'], '.vim', '.swap', swd)
 if not os.path.exists(full_swd):
     os.makedirs(full_swd)
-vim.command('set backupdir=' + full_swd)
-vim.command('set directory=' + full_swd)
+vim.options['backupdir'] = full_swd 
+vim.options['directory'] = full_swd
 endpython
 
 "------------------------------------------------------------
@@ -199,14 +194,13 @@ set t_Co=256
 set t_ut=
 
 " Plugins
-source ~/.vim/plugins.vim
+runtime plugins.vim
 
 " Folding
 set foldmethod=syntax
 set nofoldenable " disable folding
 
 " Various UI options
-set ttymouse=xterm2
 colorscheme molokai
 
 if g:is_not_git == 1
@@ -242,21 +236,44 @@ if g:is_not_git == 1
     " MiniBufExplorer options
     let g:miniBufExplBuffersNeeded = 0
 
+    let g:pymode_rope = 0
+
+    " Documentation
+    let g:pymode_doc = 1
+    let g:pymode_doc_key = 'K'
+
+    "Linting
+    let g:pymode_lint = 1
+    let g:pymode_lint_checker = "pyflakes,pep8"
+    " Auto check on save
+    let g:pymode_lint_write = 1
+
+    let g:pymode_lint_cwindow = 1
+
+    let g:pymode_lint_signs = 1
+    let g:pymode_lint_todo_symbol = '△△'
+    let g:pymode_lint_comment_symbol = '∙∙'
+    let g:pymode_lint_visual_symbol = '∀∀'
+    let g:pymode_lint_error_symbol = '!!'
+    let g:pymode_lint_info_symbol = 'II'
+    let g:pymode_lint_pyflakes_symbol = 'FF'
+
+    " Support virtualenv
+    let g:pymode_virtualenv = 1
+
+    " syntax highlighting
+    let g:pymode_syntax = 1
+    let g:pymode_syntax_all = 1
+    let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+    let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+    " Don't autofold code
+    let g:pymode_folding = 0
+
     " Buffer filetypes
     au BufRead,BufNewFile *.thor set filetype=ruby
     au BufRead,BufNewFile *.json.jbuilder set filetype=ruby
     au! BufNewFile,BufRead *.md set filetype=markdown
-
-    " Syntastic options
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_enable_signs = 1
-    let g:syntastic_loc_list_height = 5
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_error_symbol = "☢"
-    let g:syntastic_warning_symbol = "⚠"
-    hi SyntasticWarningSign guifg=Black guibg=Yellow ctermfg=232 ctermbg=100
 
     " MiniBufExpl options
     hi MBEVisibleActiveNormal guifg=Yellow ctermfg=100

@@ -17,11 +17,11 @@ if g:is_not_git == 1
     Plug 'chrisbra/csv.vim'
     Plug 'pangloss/vim-javascript'
     Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+    Plug 'klen/python-mode', { 'for': 'python' }
     Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 
     " Framework/library plugins
     Plug 'tpope/vim-rails'
-    Plug 'stefanoverna/vim-i18n'
     Plug 'tpope/vim-bundler'
 
     " UI plugins & Themes
@@ -34,7 +34,6 @@ if g:is_not_git == 1
     Plug 'guns/xterm-color-table.vim'
 
     Plug 'tpope/vim-fugitive'
-    Plug 'scrooloose/syntastic'
     Plug 'xolox/vim-misc'
     Plug 'xolox/vim-notes'
     Plug 'xolox/vim-session'
@@ -51,7 +50,7 @@ if g:is_not_git == 1
     Plug 'mtth/scratch.vim'
     Plug 'sjl/gundo.vim'
 
-    source ~/.vim/plugins.local.vim
+    runtime plugins.local.vim
 endif
 
 
