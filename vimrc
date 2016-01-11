@@ -182,7 +182,7 @@ swd = m.hexdigest()
 full_swd = os.path.join(environ['HOME'], '.vim', '.swap', swd)
 if not os.path.exists(full_swd):
     os.makedirs(full_swd)
-vim.options['backupdir'] = full_swd 
+vim.options['backupdir'] = full_swd
 vim.options['directory'] = full_swd
 endpython
 
@@ -270,6 +270,9 @@ if g:is_not_git == 1
     " Don't autofold code
     let g:pymode_folding = 0
 
+    " Snippets
+    let g:UltiSnipsExpandTrigger = "<C-e>"
+
     " Buffer filetypes
     au BufRead,BufNewFile *.thor set filetype=ruby
     au BufRead,BufNewFile *.json.jbuilder set filetype=ruby
@@ -277,6 +280,9 @@ if g:is_not_git == 1
 
     " MiniBufExpl options
     hi MBEVisibleActiveNormal guifg=Yellow ctermfg=100
+
+    " Startify
+    let g:startify_change_to_vcs_root = 1
 
     " Surround.vim maps
     " Rspec

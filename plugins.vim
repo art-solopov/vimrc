@@ -49,6 +49,11 @@ if g:is_not_git == 1
     Plug 'vim-scripts/matchit.zip'
     Plug 'mtth/scratch.vim'
     Plug 'sjl/gundo.vim'
+    Plug 'Valloric/YouCompleteMe'
+    Plug 'sirver/UltiSnips'
+    Plug 'honza/vim-snippets'
+    Plug 'mattn/emmet-vim'
+    Plug 'mhinz/vim-startify'
 
     runtime plugins.local.vim
 endif
