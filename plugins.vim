@@ -53,7 +53,6 @@ if g:is_not_git == 1
     Plug 'sirver/UltiSnips'
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
-    Plug 'mhinz/vim-startify'
 
     runtime plugins.local.vim
 endif

@@ -15,8 +15,6 @@ if !has('nvim')
     " Better command-line completion
     set wildmenu
 
-    " Show partial commands in the last line of the screen
-    set showcmd
 
     " Allow backspacing over autoindent, line breaks and start of insert action
     set backspace=indent,eol,start
@@ -82,6 +80,8 @@ set hidden
 set ignorecase
 set smartcase
 
+" Show partial commands in the last line of the screen
+set showcmd
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -209,9 +209,9 @@ if g:is_not_git == 1
     set completefunc=syntaxcomplete#Complete
 
     " Ruby complete options
-    let g:rubycomplete_buffer_loading = 1
-    let g:rubycomplete_classes_in_global = 1
-    let g:rubycomplete_rails = 1
+    " let g:rubycomplete_buffer_loading = 1
+    " let g:rubycomplete_classes_in_global = 1
+    " let g:rubycomplete_rails = 1
 
     let g:session_autosave = 'no'
     set colorcolumn=80,120
@@ -280,9 +280,6 @@ if g:is_not_git == 1
 
     " MiniBufExpl options
     hi MBEVisibleActiveNormal guifg=Yellow ctermfg=100
-
-    " Startify
-    let g:startify_change_to_vcs_root = 1
 
     " Surround.vim maps
     " Rspec
