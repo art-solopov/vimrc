@@ -19,6 +19,7 @@ if g:is_not_git == 1
     Plug 'davidhalter/jedi-vim', { 'for': 'python' }
     Plug 'klen/python-mode', { 'for': 'python' }
     Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
+    Plug 'vim-ruby/vim-ruby'
 
     " Framework/library plugins
     Plug 'tpope/vim-rails'
@@ -54,6 +55,7 @@ if g:is_not_git == 1
     Plug 'sirver/UltiSnips'
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
+    Plug 'AndrewRadev/splitjoin.vim'
 
     runtime plugins.local.vim
 endif
