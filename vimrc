@@ -197,7 +197,6 @@ set t_ut=
 runtime plugins.vim
 
 " Folding
-set foldmethod=syntax
 set nofoldenable " disable folding
 
 " Various UI options
