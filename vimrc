@@ -149,7 +149,7 @@ nnoremap <C-g>B :ls<CR>
 
 " Map NERDTree
 nnoremap <F5> :NERDTreeToggle<CR>
-nnoremap <C-\><F5> :NERDTreeFind<CR>
+nnoremap <C-g><F5> :NERDTreeFind<CR>
 
 " Map Tagbar
 nnoremap <F8> :TagbarToggle<CR>
@@ -164,9 +164,19 @@ nnoremap <C-g>q :bdelete<CR>
 " Gundo
 nnoremap <F6> :GundoToggle<CR>
 
-"CtrlP
+" CtrlP
 nnoremap <C-g>p :CtrlPBuffer<CR>
+nnoremap <Leader><Leader><C-x><C-p> :CtrlPClearAllCaches<CR>
 
+" Wrapped line keybindings
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+nnoremap <expr> <Down> v:count ? 'j' : 'gj'
+nnoremap <expr> <Up> v:count ? 'k' : 'gk'
+inoremap <expr> <Down> 'gj'
+inoremap <expr> <Up> 'gk'
+
+nnoremap <Leader><C-s> :s/\s\+$//<CR>
 
 "------------------------------------------------------------
 " Python
@@ -208,9 +218,9 @@ if g:is_not_git == 1
     set completefunc=syntaxcomplete#Complete
 
     " Ruby complete options
-    " let g:rubycomplete_buffer_loading = 1
-    " let g:rubycomplete_classes_in_global = 1
-    " let g:rubycomplete_rails = 1
+    let g:rubycomplete_buffer_loading = 1
+    let g:rubycomplete_classes_in_global = 1
+    let g:rubycomplete_rails = 1
 
     let g:session_autosave = 'no'
     set colorcolumn=80,120

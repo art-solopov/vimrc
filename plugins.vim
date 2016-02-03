@@ -20,10 +20,12 @@ if g:is_not_git == 1
     Plug 'klen/python-mode', { 'for': 'python' }
     Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
     Plug 'vim-ruby/vim-ruby'
+    Plug 'tpope/vim-jdaddy'
 
     " Framework/library plugins
     Plug 'tpope/vim-rails'
     Plug 'tpope/vim-bundler'
+    Plug 'tpope/vim-rake'
 
     " UI plugins & Themes
     Plug 'majutsushi/tagbar'
@@ -32,6 +34,7 @@ if g:is_not_git == 1
     Plug 'techlivezheng/vim-plugin-minibufexpl'
     Plug 'guns/xterm-color-table.vim'
     Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'guns/xterm-color-table.vim'
 
     Plug 'tpope/vim-fugitive'
