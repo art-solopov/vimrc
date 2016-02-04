@@ -166,17 +166,8 @@ nnoremap <F6> :GundoToggle<CR>
 
 " CtrlP
 nnoremap <C-g>p :CtrlPBuffer<CR>
-nnoremap <Leader><Leader><C-x><C-p> :CtrlPClearAllCaches<CR>
 
-" Wrapped line keybindings
-nnoremap <expr> j v:count ? 'j' : 'gj'
-nnoremap <expr> k v:count ? 'k' : 'gk'
-nnoremap <expr> <Down> v:count ? 'j' : 'gj'
-nnoremap <expr> <Up> v:count ? 'k' : 'gk'
-inoremap <expr> <Down> 'gj'
-inoremap <expr> <Up> 'gk'
-
-nnoremap <Leader><C-s> :s/\s\+$//<CR>
+nnoremap <Leader><C-s> :%s/\s\+$//<CR>
 
 "------------------------------------------------------------
 " Python
@@ -293,5 +284,13 @@ if g:is_not_git == 1
     " Surround.vim maps
     " Rspec
     let g:surround_114 = "it { \r }"
+
+    " Wrapped line keybindings. Broken in git-mode for some reason
+    nnoremap <expr> j v:count ? 'j' : 'gj'
+    nnoremap <expr> k v:count ? 'k' : 'gk'
+    nnoremap <expr> <Down> v:count ? 'j' : 'gj'
+    nnoremap <expr> <Up> v:count ? 'k' : 'gk'
+    inoremap <expr> <Down> 'gj'
+    inoremap <expr> <Up> 'gk'
 
 endif
