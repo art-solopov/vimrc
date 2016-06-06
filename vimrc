@@ -168,6 +168,7 @@ nnoremap <F6> :GundoToggle<CR>
 nnoremap <C-g>p :CtrlPBuffer<CR>
 
 nnoremap <Leader><C-s> :%s/\s\+$//<CR>
+nnoremap <Leader>p "+p
 
 "------------------------------------------------------------
 " Python
@@ -189,7 +190,7 @@ endpython
 
 "------------------------------------------------------------
 
-let g:is_not_git=($GIT_DIR == '')
+let g:is_not_git=and(($GIT_DIR == ''), ($GIT_REFLOG_ACTION == ''))
 
 set t_Co=256
 set t_ut=
