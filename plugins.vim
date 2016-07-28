@@ -21,6 +21,8 @@ if g:is_not_git == 1
     Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
     Plug 'vim-ruby/vim-ruby'
     Plug 'tpope/vim-jdaddy'
+    Plug 'slim-template/vim-slim'
+    Plug 'mustache/vim-mustache-handlebars'
 
     " Framework/library plugins
     Plug 'tpope/vim-rails'
@@ -59,6 +61,7 @@ if g:is_not_git == 1
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
     Plug 'AndrewRadev/splitjoin.vim'
+    Plug 'tpope/vim-ragtag'
 
     runtime plugins.local.vim
 endif

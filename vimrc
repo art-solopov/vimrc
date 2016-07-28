@@ -161,8 +161,8 @@ nnoremap <C-g>D :exe 'e ' . expand('%:h')<CR>
 nnoremap <C-g>w :%bdelete<CR>
 nnoremap <C-g>q :bdelete<CR>
 
-" Gundo
-nnoremap <F6> :GundoToggle<CR>
+" Mundo
+nnoremap <F6> :MundoToggle<CR>
 
 " CtrlP
 nnoremap <C-g>p :CtrlPBuffer<CR>
@@ -212,7 +212,7 @@ if g:is_not_git == 1
     " Ruby complete options
     let g:rubycomplete_buffer_loading = 1
     let g:rubycomplete_classes_in_global = 1
-    let g:rubycomplete_rails = 1
+    " let g:rubycomplete_rails = 1
 
     let g:session_autosave = 'no'
     set colorcolumn=80,120
@@ -223,6 +223,9 @@ if g:is_not_git == 1
     endif
 
     let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#show_splits = 0
+    let g:airline#extensions#tabline#show_buffers = 0
+    let g:airline#extensions#tabline#tab_min_count = 2
     let g:airline_left_sep=''
     let g:airline_right_sep='|'
     let g:airline#extensions#tabline#left_sep = ''
@@ -231,8 +234,6 @@ if g:is_not_git == 1
     let g:airline_symbols.linenr = '␤'
     let g:airline_section_c = airline#section#create(['%n', ' ', '%t'])
     let g:airline#extensions#hunks#enabled = 1
-    let g:airline#extensions#tabline#show_buffers = 0
-    let g:airline#extensions#tabline#tab_min_count = 2
 
     " MiniBufExplorer options
     let g:miniBufExplBuffersNeeded = 0
@@ -291,7 +292,6 @@ if g:is_not_git == 1
     nnoremap <expr> k v:count ? 'k' : 'gk'
     nnoremap <expr> <Down> v:count ? 'j' : 'gj'
     nnoremap <expr> <Up> v:count ? 'k' : 'gk'
-    inoremap <expr> <Down> 'gj'
-    inoremap <expr> <Up> 'gk'
 
+    set wildignore+=*/node_modules/**/*,*/tmp/*
 endif
