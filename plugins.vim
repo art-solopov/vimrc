@@ -62,6 +62,7 @@ if g:is_not_git == 1
     Plug 'mattn/emmet-vim'
     Plug 'AndrewRadev/splitjoin.vim'
     Plug 'tpope/vim-ragtag'
+    Plug 'neomake/neomake'
 
     runtime plugins.local.vim
 endif

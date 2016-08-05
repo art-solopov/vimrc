@@ -226,12 +226,8 @@ if g:is_not_git == 1
     let g:airline#extensions#tabline#show_splits = 0
     let g:airline#extensions#tabline#show_buffers = 0
     let g:airline#extensions#tabline#tab_min_count = 2
-    let g:airline_left_sep=''
-    let g:airline_right_sep='|'
-    let g:airline#extensions#tabline#left_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_symbols.branch = 'ᛋ'
-    let g:airline_symbols.linenr = '␤'
+
+    let g:airline_powerline_fonts = 1
     let g:airline_section_c = airline#section#create(['%n', ' ', '%t'])
     let g:airline#extensions#hunks#enabled = 1
 
