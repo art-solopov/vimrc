@@ -17,7 +17,7 @@ if g:is_not_git == 1
     Plug 'chrisbra/csv.vim'
     Plug 'pangloss/vim-javascript'
     Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-    Plug 'klen/python-mode', { 'for': 'python' }
+    " Plug 'klen/python-mode', { 'for': 'python' }
     Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
     Plug 'vim-ruby/vim-ruby'
     Plug 'tpope/vim-jdaddy'
@@ -56,7 +56,7 @@ if g:is_not_git == 1
     Plug 'mtth/scratch.vim'
     " Plug 'sjl/gundo.vim'
     Plug 'simnalamburt/vim-mundo'
-    Plug 'Valloric/YouCompleteMe'
+    " Plug 'Valloric/YouCompleteMe'
     Plug 'sirver/UltiSnips'
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
