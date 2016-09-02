@@ -290,4 +290,6 @@ if g:is_not_git == 1
     nnoremap <expr> <Up> v:count ? 'k' : 'gk'
 
     set wildignore+=*/node_modules/**/*,*/tmp/*
+
+    let g:deoplete#enable_at_startup = 1
 endif
