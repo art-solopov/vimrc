@@ -57,6 +57,7 @@ if g:is_not_git == 1
     " Plug 'sjl/gundo.vim'
     Plug 'simnalamburt/vim-mundo'
     " Plug 'Valloric/YouCompleteMe'
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'sirver/UltiSnips'
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
