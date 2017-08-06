@@ -16,56 +16,43 @@ if g:is_not_git == 1
     Plug 'tpope/vim-haml'
     Plug 'chrisbra/csv.vim'
     Plug 'pangloss/vim-javascript'
-    Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-    " Plug 'klen/python-mode', { 'for': 'python' }
-    Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
     Plug 'vim-ruby/vim-ruby'
     Plug 'tpope/vim-jdaddy'
     Plug 'slim-template/vim-slim'
     Plug 'mustache/vim-mustache-handlebars'
 
-    " Framework/library plugins
-    Plug 'tpope/vim-rails'
-    Plug 'tpope/vim-bundler'
-    Plug 'tpope/vim-rake'
 
     " UI plugins & Themes
+    Plug 'techlivezheng/vim-plugin-minibufexpl'
     Plug 'majutsushi/tagbar'
     Plug 'scrooloose/nerdtree'
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'techlivezheng/vim-plugin-minibufexpl'
-    Plug 'guns/xterm-color-table.vim'
-    Plug 'bling/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'guns/xterm-color-table.vim'
 
     Plug 'tpope/vim-fugitive'
-    Plug 'xolox/vim-misc'
     Plug 'xolox/vim-notes'
     Plug 'xolox/vim-session'
     Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-endwise'
-    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'Lokaltog/vim-easymotion'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
     Plug 'duggiefresh/vim-easydir'
-    Plug 'tpope/vim-speeddating'
     Plug 'vim-scripts/matchit.zip'
     Plug 'mtth/scratch.vim'
     " Plug 'sjl/gundo.vim'
     Plug 'simnalamburt/vim-mundo'
-    " Plug 'Valloric/YouCompleteMe'
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'sirver/UltiSnips'
     Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
     Plug 'AndrewRadev/splitjoin.vim'
     Plug 'tpope/vim-ragtag'
     Plug 'neomake/neomake'
 
     runtime plugins.local.vim
+
+    if g:vim_ide == 1
+        runtime plugins.ide.vim
+    endif
 endif
 
 
